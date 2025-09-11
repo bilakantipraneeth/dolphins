@@ -6,7 +6,7 @@
     <meta name="description" content="Dolphins IT Solutions offers top-notch IT services including Java, .NET, Cloud, DevOps, Automation, Business Intelligence, and more. Explore career opportunities and client solutions.">
     <meta name="keywords" content="IT Solutions, Java Development, .NET, Cloud Services, DevOps, Automation Testing, Business Intelligence, Careers, Dolphins IT Solutions">
     <meta name="author" content="Dolphins IT Solutions">
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://cdnjs.cloudflare.com; style-src 'self' https://fonts.googleapis.com https://cdnjs.cloudflare.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data:; form-action 'self' https://formspree.io;">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://cdnjs.cloudflare.com 'unsafe-inline'; style-src 'self' https://fonts.googleapis.com https://cdnjs.cloudflare.com; font-src 'self' https://fonts.gstatic.com https://cdnjs.cloudflare.com; img-src 'self' data:; connect-src 'self' https://formspree.io;">
     <title>Dolphins IT Solutions - IT Services & Careers</title>
     <link rel="stylesheet" href="css/styles.css">
     <link rel="icon" href="favicon.ico" type="image/x-icon">
@@ -30,10 +30,12 @@
 <body>
     <header>
         <nav>
+            <a href="#home" class="logo-link">
             <div class="logo-container">
                 <img src="images/dolphins IT logo 2.png" alt="Dolphins IT Solutions Logo">
             </div>
             <h1>Dolphins IT Solutions</h1>
+            </a>
             <ul class="nav-links">
                 <li><a href="#home">Home</a></li>
                 <li><a href="#services">Our Services</a></li>
@@ -68,9 +70,10 @@
     </section>
 
     <section id="services" class="animate-on-scroll">
-        <h2>Our Services</h2>
-        <img src="images/02.jpg" alt="A team of developers working collaboratively on a project, showcasing Dolphins IT Solutions' teamwork and expertise." class="service-image">
-        <div class="services-list">
+        <div class="container">
+            <h2>Our Services</h2>
+            <img src="images/02.jpg" alt="A team of developers working collaboratively on a project, showcasing Dolphins IT Solutions' teamwork and expertise." class="service-image">
+            <div class="services-list">
             <div class="service-item">
                 <span class="service-icon">&#128187;</span>
                 <h3>Internet Based Technologies</h3>
@@ -143,17 +146,19 @@
                 </ul>
             </div>
         </div>
+    </div>
     </section>
 
     <section id="careers" class="animate-on-scroll">
-        <h2>Careers</h2>
-        <p>All positions require a minimum of a Bachelor or Masters degree.</p>
-        <div class="job-listings">
+        <div class="container">
+            <h2>Careers</h2>
+            <p>All positions require a minimum of a Bachelor or Masters degree.</p>
+            <div class="job-listings">
             <div class="job-card">
                 <h3>Java Developer</h3>
                 <div class="job-details">
-                    <span><strong>Experience:</strong> 3-7 years</span>
-                    <span><strong>Type:</strong> Full-time or Contract</span>
+                    <div><span><strong>Experience:</strong> 3-7 years</span></div>
+                    <div><span><strong>Type:</strong> Full-time or Contract</span></div>
                 </div>
                 <p>Strong Core Java, Data structures, Spring, ORM, Agile.</p>
                 <a href="mailto:careers@dolphinsitsolutions.com?subject=Application for Java Developer" class="btn">Apply Now</a>
@@ -161,8 +166,8 @@
             <div class="job-card">
                 <h3>Sr Java Developer/Team Lead/Architect</h3>
                 <div class="job-details">
-                    <span><strong>Experience:</strong> 7+ years</span>
-                    <span><strong>Type:</strong> Full-time or Contract</span>
+                    <div><span><strong>Experience:</strong> 7+ years</span></div>
+                    <div><span><strong>Type:</strong> Full-time or Contract</span></div>
                 </div>
                 <p>Core Java, Spring, Cloud (AWS/Azure/GCP), DevOps, mentoring.</p>
                 <a href="mailto:careers@dolphinsitsolutions.com?subject=Application for Sr Java Developer/Team Lead/Architect" class="btn">Apply Now</a>
@@ -170,8 +175,8 @@
             <div class="job-card">
                 <h3>.NET Developer</h3>
                 <div class="job-details">
-                    <span><strong>Experience:</strong> 3+ years</span>
-                    <span><strong>Type:</strong> Full-time or Contract</span>
+                    <div><span><strong>Experience:</strong> 3+ years</span></div>
+                    <div><span><strong>Type:</strong> Full-time or Contract</span></div>
                 </div>
                 <p>ASP, HTML, Javascript, SQL Server, Azure.</p>
                 <a href="mailto:careers@dolphinsitsolutions.com?subject=Application for .NET Developer" class="btn">Apply Now</a>
@@ -179,7 +184,7 @@
             <div class="job-card">
                 <h3>DevOps Engineer</h3>
                 <div class="job-details">
-                    <span><strong>Type:</strong> Full-time or Contract</span>
+                    <div><span><strong>Type:</strong> Full-time or Contract</span></div>
                 </div>
                 <p>Agile, CI/CD, Cloud, Ansible, Terraform, Containerization.</p>
                 <a href="mailto:careers@dolphinsitsolutions.com?subject=Application for DevOps Engineer" class="btn">Apply Now</a>
@@ -187,8 +192,8 @@
             <div class="job-card">
                 <h3>QA Testers/Lead Engineers</h3>
                 <div class="job-details">
-                    <span><strong>Experience:</strong> 3-15 years</span>
-                    <span><strong>Type:</strong> Full-time or Contract</span>
+                    <div><span><strong>Experience:</strong> 3-15 years</span></div>
+                    <div><span><strong>Type:</strong> Full-time or Contract</span></div>
                 </div>
                 <p>Testing, Selenium, Java, SQL, Agile.</p>
                 <a href="mailto:careers@dolphinsitsolutions.com?subject=Application for QA Testers/Lead Engineers" class="btn">Apply Now</a>
@@ -196,18 +201,19 @@
             <div class="job-card">
                 <h3>Data Science & Machine Learning</h3>
                 <div class="job-details">
-                    <span><strong>Type:</strong> Full-time or Contract</span>
+                    <div><span><strong>Type:</strong> Full-time or Contract</span></div>
                 </div>
                 <p>Data Mining, Machine Learning, Text Analysis, Image Processing.</p>
                 <a href="mailto:careers@dolphinsitsolutions.com?subject=Application for Data Science & Machine Learning" class="btn">Apply Now</a>
             </div>
         </div>
         <p><strong>Equal Opportunity Employer</strong>: We believe in treating everyone equally without discrimination based on age, gender, sex, color, etc. Valid work authorization required.</p>
+    </div>
     </section>
 
     <section id="clients" class="animate-on-scroll">
-        <h2>Our Clients</h2>
-        <img src="images/03.jpg" alt="A collage of logos from various clients, demonstrating the diverse range of industries Dolphins IT Solutions serves." class="clients-image">
+            <h2>Our Clients</h2>
+            <img src="images/03.jpg" alt="A collage of logos from various clients, demonstrating the diverse range of industries Dolphins IT Solutions serves." class="clients-image">
         <p>We have had the privilege of working with a diverse range of clients across various industries. Our commitment to excellence and innovation has allowed us to build strong and lasting relationships. We are proud to have served clients in the following sectors:</p>
         <ul>
             <li>Telecommunications</li>
