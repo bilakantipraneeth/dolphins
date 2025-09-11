@@ -1,13 +1,14 @@
 document.addEventListener('DOMContentLoaded', () => {
     // Mobile menu toggle
     const navLinks = document.querySelector('.nav-links');
-    const menuButton = document.createElement('button');
-    menuButton.textContent = 'Menu';
-    menuButton.classList.add('menu-button');
-    document.querySelector('nav').insertBefore(menuButton, navLinks);
+    const menuButton = document.querySelector('.menu-button');
 
     menuButton.addEventListener('click', () => {
         navLinks.classList.toggle('active');
+    });
+
+    navLinks.addEventListener('click', () => {
+        navLinks.classList.remove('active');
     });
 
     // Animate elements on scroll
