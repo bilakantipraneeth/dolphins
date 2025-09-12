@@ -112,8 +112,11 @@ h1 {
     transition: color 0.3s;
 }
 
-.nav-links a:hover {
-    color: var(--accent-color); /* Light blue on hover */
+.nav-links a:hover,
+.nav-links a.active {
+    color: var(--accent-color); /* Light blue on hover and for active link */
+    font-weight: bold;
+    border-bottom: 2px solid var(--accent-color);
 }
 
 .menu-button {
@@ -731,6 +734,10 @@ footer {
 
     .nav-links.active {
         display: flex;
+    }
+
+    .nav-links a {
+        color: var(--white-color); /* White links for mobile menu */
     }
 
     .nav-links a {
