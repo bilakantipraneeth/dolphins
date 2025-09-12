@@ -1,14 +1,24 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // Mobile menu toggle
+    const header = document.querySelector('header');
     const navLinks = document.querySelector('.nav-links');
     const menuButton = document.querySelector('.menu-button');
 
+    // Mobile menu toggle
     menuButton.addEventListener('click', () => {
         navLinks.classList.toggle('active');
     });
 
     navLinks.addEventListener('click', () => {
         navLinks.classList.remove('active');
+    });
+
+    // Header scroll effect
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 50) {
+            header.classList.add('scrolled');
+        } else {
+            header.classList.remove('scrolled');
+        }
     });
 
     // Animate elements on scroll
@@ -62,9 +72,15 @@ document.addEventListener('DOMContentLoaded', () => {
         requiredFields.forEach(field => {
             if (!field.value.trim()) {
                 isValid = false;
-                showToaster(`Please fill out the ${field.name} field.`, 'error');
+                field.style.border = '1px solid red';
+            } else {
+                field.style.border = '1px solid #ddd';
             }
         });
+
+        if (!isValid) {
+            showToaster('Please fill out all required fields.', 'error');
+        }
 
         return isValid;
     };
@@ -113,4 +129,59 @@ document.addEventListener('DOMContentLoaded', () => {
             toaster.className = 'toaster';
         }, 3000);
     }
+
+    // Service Detail Modal Logic
+    const serviceDetailModal = document.getElementById('service-detail-modal');
+    const closeModalButton = serviceDetailModal.querySelector('.close-button');
+    const modalServiceTitle = document.getElementById('modal-service-title');
+    const modalServiceDescription = document.getElementById('modal-service-description');
+    const modalServiceDetailsList = document.getElementById('modal-service-details-list');
+    const serviceCards = document.querySelectorAll('.service-card');
+
+    // Parse service details from the script tag
+    const serviceDetailsScript = document.getElementById('service-details');
+    const allServiceDetails = JSON.parse(serviceDetailsScript.textContent);
+
+    serviceCards.forEach(card => {
+        card.addEventListener('click', () => {
+            const serviceId = card.dataset.service;
+            const details = allServiceDetails[serviceId];
+
+            if (details) {
+                modalServiceTitle.textContent = details.title;
+                modalServiceDescription.textContent = details.description;
+                modalServiceDetailsList.innerHTML = ''; // Clear previous details
+
+                details.details.forEach(item => {
+                    const li = document.createElement('li');
+                    li.textContent = item;
+                    modalServiceDetailsList.appendChild(li);
+                });
+
+                serviceDetailModal.style.display = 'block';
+                document.body.style.overflow = 'hidden'; // Prevent scrolling background
+            }
+        });
+    });
+
+    closeModalButton.addEventListener('click', () => {
+        serviceDetailModal.style.display = 'none';
+        document.body.style.overflow = ''; // Restore scrolling
+    });
+
+    // Close modal if clicked outside content
+    window.addEventListener('click', (event) => {
+        if (event.target === serviceDetailModal) {
+            serviceDetailModal.style.display = 'none';
+            document.body.style.overflow = '';
+        }
+    });
+});
+window.addEventListener("scroll", function() {
+  const header = document.querySelector("header");
+  if (window.scrollY > 50) {
+    header.classList.add("scrolled");
+  } else {
+    header.classList.remove("scrolled");
+  }
 });
