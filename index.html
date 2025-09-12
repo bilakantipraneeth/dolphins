@@ -26,15 +26,107 @@
       }
     }
     </script>
+    <script type="application/json" id="service-details">
+    {
+      "internet-based": {
+        "title": "Internet Based Technologies",
+        "description": "We specialize in developing robust and scalable web applications using cutting-edge internet-based technologies. Our expertise spans across various open-source frameworks and programming languages.",
+        "details": [
+          "Open source software development and integration",
+          "Java development (Core Java, J2EE)",
+          "Spring Framework (Spring Boot, Spring MVC, Spring Security)",
+          "Database design and optimization (SQL, NoSQL)",
+          "Microservices architecture and API development"
+        ]
+      },
+      "net-technologies": {
+        "title": ".NET Technologies",
+        "description": "Our team delivers high-performance enterprise solutions leveraging the full power of Microsoft .NET technologies. We build secure, reliable, and scalable applications tailored to your business needs.",
+        "details": [
+          "ASP.NET development (ASP.NET Core, MVC, Web Forms)",
+          "C# programming and application development",
+          "SharePoint development and administration",
+          "SQL Server database solutions",
+          "Azure cloud integration and services"
+        ]
+      },
+      "cloud-devops": {
+        "title": "Cloud & DevOps",
+        "description": "Accelerate your software delivery and enhance operational efficiency with our comprehensive Cloud and DevOps services. We help you design, implement, and manage cloud infrastructure and CI/CD pipelines.",
+        "details": [
+          "DevOps strategy and implementation",
+          "Cloud infrastructure management (AWS, Azure, GCP)",
+          "Containerization with Docker and Kubernetes",
+          "CI/CD pipeline setup and automation",
+          "Infrastructure as Code (IaC) with Terraform and Ansible"
+        ]
+      },
+      "automation-testing": {
+        "title": "Automation & Manual Testing",
+        "description": "Ensure the quality and reliability of your software with our expert testing services. We combine manual testing rigor with advanced automation techniques to deliver flawless applications.",
+        "details": [
+          "Manual functional and regression testing",
+          "Automation testing using Selenium, QTP, and other tools",
+          "Performance and load testing",
+          "Test plan creation and execution",
+          "Defect tracking and management with JIRA, GIT"
+        ]
+      },
+      "business-intelligence": {
+        "title": "Business Intelligence",
+        "description": "Unlock the true potential of your data with our Business Intelligence solutions. We provide comprehensive services from data collection to advanced analytics and visualization, empowering informed decision-making.",
+        "details": [
+          "Big data processing and analytics",
+          "Data warehousing and ETL solutions",
+          "Data visualization and dashboarding (Power BI, Tableau)",
+          "Predictive analytics and reporting",
+          "Data governance and quality management"
+        ]
+      },
+      "database-technologies": {
+        "title": "Database Technologies",
+        "description": "Our database experts ensure your data is stored, managed, and accessed efficiently and securely. We work with a wide range of relational and NoSQL databases to support your application needs.",
+        "details": [
+          "Oracle database administration and development",
+          "SQL Server management and optimization",
+          "MongoDB implementation and support",
+          "Cassandra database solutions",
+          "Database migration and performance tuning"
+        ]
+      },
+      "user-experience": {
+        "title": "User Experience (UI/UX)",
+        "description": "Create engaging and intuitive user interfaces that delight your customers. Our UI/UX team focuses on user-centered design principles to deliver exceptional digital experiences.",
+        "details": [
+          "Responsive web design and development",
+          "Frontend development with React JS, Angular JS, Backbone.js",
+          "UI/UX research and wireframing",
+          "Prototyping and user testing",
+          "Accessibility compliance"
+        ]
+      },
+      "cybersecurity": {
+        "title": "Cybersecurity",
+        "description": "Protect your valuable digital assets from evolving cyber threats with our robust cybersecurity services. We offer comprehensive solutions to safeguard your data and infrastructure.",
+        "details": [
+          "Security audits and vulnerability assessments",
+          "Network security and intrusion detection",
+          "Data encryption and access control",
+          "Compliance and regulatory adherence",
+          "Incident response and recovery planning"
+        ]
+      }
+    }
+    </script>
 </head>
 <body>
     <header>
         <nav>
             <a href="#home" class="logo-link">
-            <div class="logo-container">
-                <img src="images/dolphins IT logo 2.png" alt="Dolphins IT Solutions Logo">
-            </div>
-            <h1>Dolphins IT Solutions</h1>
+                <div class="logo-container">
+                    <img src="images/dolphins IT logo 2.png" alt="Dolphins IT Solutions Logo">
+                </div>
+                <h1>Dolphins IT Solutions</h1>
             </a>
             <ul class="nav-links">
                 <li><a href="#home">Home</a></li>
@@ -47,8 +139,14 @@
         </nav>
     </header>
 
-    <section id="hero-banner" class="animate-on-scroll">
-        <img src="images/01.jpg" alt="A modern office building with a glass facade, representing Dolphins IT Solutions' professional environment." class="hero-banner-img">
+    <section id="hero-banner">
+        <div class="hero-overlay"></div>
+        <img src="images/dolphins-it-solutions-hero-banner.jpeg" alt="High-quality image of a modern office building with a glass facade." class="hero-banner-img">
+        <div class="hero-content animate-on-scroll">
+            <h2>Your Vision, Our Expertise</h2>
+            <p>Delivering innovative IT solutions to drive your business forward.</p>
+            <a href="#contact" class="btn">Get in Touch</a>
+        </div>
     </section>
 
     <section id="home" class="animate-on-scroll">
@@ -57,172 +155,195 @@
             <p>Our primary goal is to build strong relationships with top-notch talent and help them connect with leading clients across various fields for the best results. We listen, share, challenge ideas, and support our staff in reaching their goals while respecting clients and vendors to foster ethical, cultural diversity, and improve economic conditions.</p>
             <h2>Why Dolphins IT Solutions?</h2>
             <ul>
-                <li>Competitive salary</li>
-                <li>Paid leaves</li>
-                <li>Free professional trainings</li>
-                <li>Medical benefits</li>
-                <li>Referral bonus</li>
-                <li>Relocation benefits</li>
-                <li>Skill enhancement programs</li>
-                <li>Equal opportunity employer</li>
+                <li><span><i class="fas fa-dollar-sign"></i> Competitive salary</span></li>
+                <li><span><i class="fas fa-umbrella-beach"></i> Paid leaves</span></li>
+                <li><span><i class="fas fa-graduation-cap"></i> Free professional trainings</span></li>
+                <li><span><i class="fas fa-heartbeat"></i> Medical benefits</span></li>
+                <li><span><i class="fas fa-gift"></i> Referral bonus</span></li>
+                <li><span><i class="fas fa-plane"></i> Relocation benefits</span></li>
+                <li><span><i class="fas fa-code"></i> Skill enhancement programs</span></li>
+                <li><span><i class="fas fa-users"></i> Equal opportunity employer</span></li>
             </ul>
+            <a href="#contact" class="btn">Learn More</a>
         </div>
     </section>
 
     <section id="services" class="animate-on-scroll">
         <div class="container">
-            <h2>Our Services</h2>
-            <img src="images/02.jpg" alt="A team of developers working collaboratively on a project, showcasing Dolphins IT Solutions' teamwork and expertise." class="service-image">
-            <div class="services-list">
-            <div class="service-item">
-                <span class="service-icon">&#128187;</span>
-                <h3>Internet Based Technologies</h3>
-                <ul>
-                    <li>Open source software</li>
-                    <li>Java</li>
-                    <li>Spring</li>
-                    <li>Databases</li>
-                    <li>No SQL</li>
-                </ul>
+            <h2>Our Premier Services</h2>
+            <p class="services-subheading">Explore our wide range of IT solutions designed to elevate your business.</p>
+            <div class="services-grid">
+                <div class="service-card" data-service="internet-based">
+                    <div class="service-icon-container"><i class="fas fa-laptop-code"></i></div>
+                    <h3>Internet Based Technologies</h3>
+                    <p>Harness the power of open-source software, Java, Spring, and various databases (SQL & NoSQL) to build robust web applications.</p>
+                </div>
+                <div class="service-card" data-service="net-technologies">
+                    <div class="service-icon-container"><i class="fab fa-windows"></i></div>
+                    <h3>.NET Technologies</h3>
+                    <p>Leverage Microsoft technologies like ASP.NET, C#, SharePoint, and SQL Server for scalable and secure enterprise solutions.</p>
+                </div>
+                <div class="service-card" data-service="cloud-devops">
+                    <div class="service-icon-container"><i class="fas fa-cloud"></i></div>
+                    <h3>Cloud & DevOps</h3>
+                    <p>Accelerate your development lifecycle with our DevOps expertise and cloud solutions on AWS, Azure, and GCP.</p>
+                </div>
+                <div class="service-card" data-service="automation-testing">
+                    <div class="service-icon-container"><i class="fas fa-tasks"></i></div>
+                    <h3>Automation & Manual Testing</h3>
+                    <p>Ensure software quality with our comprehensive testing services, including manual, automation (Selenium, QTP), and JIRA/GIT integration.</p>
+                </div>
+                <div class="service-card" data-service="business-intelligence">
+                    <div class="service-icon-container"><i class="fas fa-chart-line"></i></div>
+                    <h3>Business Intelligence</h3>
+                    <p>Transform data into actionable insights with our BI solutions, covering big data, analytics, visualization, and ETL tools.</p>
+                </div>
+                <div class="service-card" data-service="database-technologies">
+                    <div class="service-icon-container"><i class="fas fa-database"></i></div>
+                    <h3>Database Technologies</h3>
+                    <p>Manage your data effectively with our expertise in various database technologies, including Oracle, SQL Server, Mongo, and Cassandra.</p>
+                </div>
+                <div class="service-card" data-service="user-experience">
+                    <div class="service-icon-container"><i class="fas fa-palette"></i></div>
+                    <h3>User Experience (UI/UX)</h3>
+                    <p>Create intuitive and engaging user interfaces with modern frontend technologies like React, Angular, and Backbone.js.</p>
+                </div>
+                <div class="service-card" data-service="cybersecurity">
+                    <div class="service-icon-container"><i class="fas fa-shield-alt"></i></div>
+                    <h3>Cybersecurity</h3>
+                    <p>Protect your digital assets with our advanced cybersecurity services, ensuring the integrity and confidentiality of your data.</p>
+                </div>
             </div>
-            <div class="service-item">
-                <span class="service-icon">&#128187;</span>
-                <h3>.NET Technologies</h3>
-                <ul>
-                    <li>ASP</li>
-                    <li>C#</li>
-                    <li>SharePoint</li>
-                    <li>SQL Server</li>
-                </ul>
-            </div>
-            <div class="service-item">
-                <span class="service-icon">&#9928;</span>
-                <h3>Cloud, DevOps</h3>
-                <ul>
-                    <li>DevOps expertise</li>
-                    <li>AWS</li>
-                    <li>Azure</li>
-                    <li>GCP</li>
-                </ul>
-            </div>
-            <div class="service-item">
-                <span class="service-icon">&#128270;</span>
-                <h3>Automation/Manual</h3>
-                <ul>
-                    <li>Manual testing</li>
-                    <li>Automation testing</li>
-                    <li>Selenium</li>
-                    <li>QTP</li>
-                    <li>JIRA, GIT</li>
-                </ul>
-            </div>
-            <div class="service-item">
-                <span class="service-icon">&#128202;</span>
-                <h3>Business Intelligence</h3>
-                <ul>
-                    <li>Big data and analytics</li>
-                    <li>Data analysis and visualization</li>
-                    <li>ETL tools</li>
-                </ul>
-            </div>
-            <div class="service-item">
-                <span class="service-icon">&#128189;</span>
-                <h3>Databases Technologies</h3>
-                <ul>
-                    <li>Oracle</li>
-                    <li>SQL Server</li>
-                    <li>Mongo</li>
-                    <li>Cassandra</li>
-                </ul>
-            </div>
-            <div class="service-item">
-                <span class="service-icon">&#128172;</span>
-                <h3>User Experience</h3>
-                <ul>
-                    <li>React JS</li>
-                    <li>Angular JS</li>
-                    <li>Backbone</li>
-                    <li>UI/UX</li>
-                </ul>
-            </div>
+            <a href="#contact" class="btn btn-primary">Discover More</a>
+        </div>
+    </section>
+
+    <!-- Service Detail Modal -->
+    <div id="service-detail-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <h3 id="modal-service-title"></h3>
+            <p id="modal-service-description"></p>
+            <ul id="modal-service-details-list"></ul>
         </div>
     </div>
-    </section>
 
     <section id="careers" class="animate-on-scroll">
         <div class="container">
-            <h2>Careers</h2>
-            <p>All positions require a minimum of a Bachelor or Masters degree.</p>
+            <h2>Join Our Dynamic Team</h2>
+            <p class="careers-subheading">At Dolphins IT Solutions, we believe in fostering a culture of innovation, growth, and collaboration. We're always looking for passionate and talented individuals to join us in shaping the future of technology.</p>
+            <div class="why-join-us">
+                <h3>Why Choose a Career with Dolphins IT Solutions?</h3>
+                <div class="benefits-grid">
+                    <div class="benefit-item">
+                        <i class="fas fa-hand-holding-usd"></i>
+                        <p><strong>Competitive Compensation:</strong> We offer attractive salary packages and performance-based bonuses.</p>
+                    </div>
+                    <div class="benefit-item">
+                        <i class="fas fa-briefcase-medical"></i>
+                        <p><strong>Comprehensive Benefits:</strong> Enjoy medical, dental, and vision coverage, along with paid time off.</p>
+                    </div>
+                    <div class="benefit-item">
+                        <i class="fas fa-chart-line"></i>
+                        <p><strong>Career Growth:</strong> Access to continuous learning, professional development, and clear career paths.</p>
+                    </div>
+                    <div class="benefit-item">
+                        <i class="fas fa-users-cog"></i>
+                        <p><strong>Innovative Environment:</strong> Work on challenging projects with cutting-edge technologies in a supportive team.</p>
+                    </div>
+                    <div class="benefit-item">
+                        <i class="fas fa-globe-americas"></i>
+                        <p><strong>Global Opportunities:</strong> Be part of a diverse team with potential for international exposure and relocation benefits.</p>
+                    </div>
+                    <div class="benefit-item">
+                        <i class="fas fa-brain"></i>
+                        <p><strong>Skill Enhancement:</strong> Free professional trainings and workshops to keep your skills sharp and relevant.</p>
+                    </div>
+                </div>
+            </div>
+            <h2 class="current-openings-heading">Current Openings</h2>
+            <p class="current-openings-subheading">All positions require a minimum of a Bachelor or Master's degree in a relevant field.</p>
             <div class="job-listings">
-            <div class="job-card">
-                <h3>Java Developer</h3>
-                <div class="job-details">
-                    <div><span><strong>Experience:</strong> 3-7 years</span></div>
-                    <div><span><strong>Type:</strong> Full-time or Contract</span></div>
+                <div class="job-card">
+                    <div class="job-card-header">
+                        <h3>Java Developer</h3>
+                    </div>
+                    <div class="job-details">
+                        <p><strong>Experience:</strong> 3-7 years</p>
+                        <p><strong>Type:</strong> Full-time or Contract</p>
+                        <p><strong>Skills:</strong> Strong Core Java, Data structures, Spring, ORM, Agile methodologies.</p>
+                    </div>
+                    <a href="mailto:careers@dolphinsitsolutions.com?subject=Application for Java Developer" class="btn btn-secondary">Apply Now</a>
                 </div>
-                <p>Strong Core Java, Data structures, Spring, ORM, Agile.</p>
-                <a href="mailto:careers@dolphinsitsolutions.com?subject=Application for Java Developer" class="btn">Apply Now</a>
-            </div>
-            <div class="job-card">
-                <h3>Sr Java Developer/Team Lead/Architect</h3>
-                <div class="job-details">
-                    <div><span><strong>Experience:</strong> 7+ years</span></div>
-                    <div><span><strong>Type:</strong> Full-time or Contract</span></div>
+                <div class="job-card">
+                    <div class="job-card-header">
+                        <h3>Sr Java Developer/Team Lead/Architect</h3>
+                    </div>
+                    <div class="job-details">
+                        <p><strong>Experience:</strong> 7+ years</p>
+                        <p><strong>Type:</strong> Full-time or Contract</p>
+                        <p><strong>Skills:</strong> Core Java, Spring, Cloud (AWS/Azure/GCP), DevOps, mentoring, architectural design.</p>
+                    </div>
+                    <a href="mailto:careers@dolphinsitsolutions.com?subject=Application for Sr Java Developer/Team Lead/Architect" class="btn btn-secondary">Apply Now</a>
                 </div>
-                <p>Core Java, Spring, Cloud (AWS/Azure/GCP), DevOps, mentoring.</p>
-                <a href="mailto:careers@dolphinsitsolutions.com?subject=Application for Sr Java Developer/Team Lead/Architect" class="btn">Apply Now</a>
-            </div>
-            <div class="job-card">
-                <h3>.NET Developer</h3>
-                <div class="job-details">
-                    <div><span><strong>Experience:</strong> 3+ years</span></div>
-                    <div><span><strong>Type:</strong> Full-time or Contract</span></div>
+                <div class="job-card">
+                    <div class="job-card-header">
+                        <h3>.NET Developer</h3>
+                    </div>
+                    <div class="job-details">
+                        <p><strong>Experience:</strong> 3+ years</p>
+                        <p><strong>Type:</strong> Full-time or Contract</p>
+                        <p><strong>Skills:</strong> ASP.NET, HTML, Javascript, SQL Server, Azure cloud services.</p>
+                    </div>
+                    <a href="mailto:careers@dolphinsitsolutions.com?subject=Application for .NET Developer" class="btn btn-secondary">Apply Now</a>
                 </div>
-                <p>ASP, HTML, Javascript, SQL Server, Azure.</p>
-                <a href="mailto:careers@dolphinsitsolutions.com?subject=Application for .NET Developer" class="btn">Apply Now</a>
-            </div>
-            <div class="job-card">
-                <h3>DevOps Engineer</h3>
-                <div class="job-details">
-                    <div><span><strong>Type:</strong> Full-time or Contract</span></div>
+                <div class="job-card">
+                    <div class="job-card-header">
+                        <h3>DevOps Engineer</h3>
+                    </div>
+                    <div class="job-details">
+                        <p><strong>Experience:</strong> 5+ years</p>
+                        <p><strong>Type:</strong> Full-time or Contract</p>
+                        <p><strong>Skills:</strong> Agile, CI/CD, Cloud platforms, Ansible, Terraform, Containerization (Docker, Kubernetes).</p>
+                    </div>
+                    <a href="mailto:careers@dolphinsitsolutions.com?subject=Application for DevOps Engineer" class="btn btn-secondary">Apply Now</a>
                 </div>
-                <p>Agile, CI/CD, Cloud, Ansible, Terraform, Containerization.</p>
-                <a href="mailto:careers@dolphinsitsolutions.com?subject=Application for DevOps Engineer" class="btn">Apply Now</a>
-            </div>
-            <div class="job-card">
-                <h3>QA Testers/Lead Engineers</h3>
-                <div class="job-details">
-                    <div><span><strong>Experience:</strong> 3-15 years</span></div>
-                    <div><span><strong>Type:</strong> Full-time or Contract</span></div>
+                <div class="job-card">
+                    <div class="job-card-header">
+                        <h3>QA Testers/Lead Engineers</h3>
+                    </div>
+                    <div class="job-details">
+                        <p><strong>Experience:</strong> 3-15 years</p>
+                        <p><strong>Type:</strong> Full-time or Contract</p>
+                        <p><strong>Skills:</strong> Manual and Automation Testing, Selenium, Java, SQL, Agile methodologies.</p>
+                    </div>
+                    <a href="mailto:careers@dolphinsitsolutions.com?subject=Application for QA Testers/Lead Engineers" class="btn btn-secondary">Apply Now</a>
                 </div>
-                <p>Testing, Selenium, Java, SQL, Agile.</p>
-                <a href="mailto:careers@dolphinsitsolutions.com?subject=Application for QA Testers/Lead Engineers" class="btn">Apply Now</a>
-            </div>
-            <div class="job-card">
-                <h3>Data Science & Machine Learning</h3>
-                <div class="job-details">
-                    <div><span><strong>Type:</strong> Full-time or Contract</span></div>
+                <div class="job-card">
+                    <div class="job-card-header">
+                        <h3>Data Science & Machine Learning</h3>
+                    </div>
+                    <div class="job-details">
+                        <p><strong>Experience:</strong> 4+ years</p>
+                        <p><strong>Type:</strong> Full-time or Contract</p>
+                        <p><strong>Skills:</strong> Data Mining, Machine Learning algorithms, Text Analysis, Image Processing, Python/R.</p>
+                    </div>
+                    <a href="mailto:careers@dolphinsitsolutions.com?subject=Application for Data Science & Machine Learning" class="btn btn-secondary">Apply Now</a>
                 </div>
-                <p>Data Mining, Machine Learning, Text Analysis, Image Processing.</p>
-                <a href="mailto:careers@dolphinsitsolutions.com?subject=Application for Data Science & Machine Learning" class="btn">Apply Now</a>
             </div>
+            <p class="equal-opportunity-statement"><strong>Equal Opportunity Employer</strong>: We believe in treating everyone equally without discrimination based on age, gender, sex, color, etc. Valid work authorization required.</p>
+            <a href="#contact" class="btn btn-primary view-all-btn">View All Openings</a>
         </div>
-        <p><strong>Equal Opportunity Employer</strong>: We believe in treating everyone equally without discrimination based on age, gender, sex, color, etc. Valid work authorization required.</p>
-    </div>
     </section>
 
     <section id="clients" class="animate-on-scroll">
-            <h2>Our Clients</h2>
-            <img src="images/03.jpg" alt="A collage of logos from various clients, demonstrating the diverse range of industries Dolphins IT Solutions serves." class="clients-image">
-        <p>We have had the privilege of working with a diverse range of clients across various industries. Our commitment to excellence and innovation has allowed us to build strong and lasting relationships. We are proud to have served clients in the following sectors:</p>
-        <ul>
-            <li>Telecommunications</li>
-            <li>Finance and Banking</li>
-            <li>Retail and E-commerce</li>
-            <li>Insurance</li>
-            <li>Healthcare</li>
-        </ul>
-        <p>We provide our clients with cost-effective solutions and top-notch resources, helping them to improve their ROI and achieve their business goals. For more information on how we can help your business, please <a href="#contact">contact us</a>.</p>
+        <div class="container">
+            <h2>Our Valued Clients</h2>
+            <p class="clients-subheading">We are proud to partner with a diverse range of clients, delivering innovative IT solutions that drive their success. Our commitment to excellence has fostered strong, lasting relationships across various industries.</p>
+            
+            <p class="clients-call-to-action">Ready to join our growing list of successful partners? Let's discuss how Dolphins IT Solutions can help achieve your business objectives.</p>
+            <a href="#contact" class="btn btn-primary">Partner With Us</a>
+        </div>
     </section>
 
     <section id="contact" class="animate-on-scroll">
@@ -250,24 +371,15 @@
 
     <footer>
         <div class="footer-grid">
-            <div class="footer-section connect-us">
-                <h3>Connect with us</h3>
-                <ul>
-                    <li><a href="https://www.linkedin.com/in/dolphinsitsolutions" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin"></i> LinkedIn</a></li>
-                    <li><a href="https://www.instagram.com/dolphinsitsolutions" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram"></i> Instagram</a></li>
-                    <li><a href="https://twitter.com/dolphinsitsol" target="_blank" rel="noopener noreferrer"><i class="fab fa-twitter"></i> Twitter</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                    <li><a href="#careers">Careers</a></li>
-                </ul>
+            <div class="footer-section">
+                <h3>Connect With Us</h3>
+                <div class="social-icons-footer">
+                    <a href="https://www.linkedin.com/in/dolphinsitsolutions" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin"></i> LinkedIn</a>
+                    <a href="https://www.instagram.com/dolphinsitsolutions" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram"></i> Instagram</a>
+                    <a href="https://twitter.com/dolphinsitsol" target="_blank" rel="noopener noreferrer"><i class="fab fa-twitter"></i> Twitter</a>
+                </div>
             </div>
-            <div class="footer-section about-us">
-                <h3>About</h3>
-                <ul>
-                    <li><a href="#">The Company</a></li>
-                    <li><a href="#">Case Studies</a></li>
-                </ul>
-            </div>
-            <div class="footer-section services-footer">
+            <div class="footer-section">
                 <h3>Services</h3>
                 <ul>
                     <li><a href="#services">Application Management</a></li>
@@ -275,10 +387,28 @@
                     <li><a href="#services">Oracle</a></li>
                 </ul>
             </div>
+            <div class="footer-section">
+                <h3>About Us</h3>
+                <ul>
+                    <li><a href="#">The Company</a></li>
+                    <li><a href="#">Case Studies</a></li>
+                    <li><a href="#careers">Careers</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Contact Us</h3>
+                <ul>
+                    <li><a href="mailto:contact@dolphinsitsolutions.com">contact@dolphinsitsolutions.com</a></li>
+                    <li><a href="tel:+14699714486">+1 (469) 971-4486</a></li>
+                </ul>
+            </div>
         </div>
         <div class="footer-bottom">
-            <a href="#">Privacy Policy</a>
-            <a href="#">Terms and Conditions</a>
+            <p>&copy; 2025 Dolphins IT Solutions. All Rights Reserved.</p>
+            <div>
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms and Conditions</a>
+            </div>
         </div>
     </footer>
     <script src="js/script.js" defer></script>
